@@ -1,0 +1,37 @@
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Tests
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Tests.deps.json
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Tests.runtimeconfig.json
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Tests.dll
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Tests.pdb
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Core.dll
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/bin/Debug/net8.0/Battleship.Core.pdb
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.csproj.AssemblyReference.cache
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.AssemblyInfoInputs.cache
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.AssemblyInfo.cs
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.csproj.CoreCompileInputs.cache
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battlesh.536F4196.Up2Date
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.dll
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/refint/Battleship.Tests.dll
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.pdb
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/Battleship.Tests.genruntimeconfig.cache
+/Users/lidia/Work/ИПМКН/Task2/Battleship.Tests/obj/Debug/net8.0/ref/Battleship.Tests.dll
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Tests.exe
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Tests.deps.json
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Tests.runtimeconfig.json
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Tests.dll
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Tests.pdb
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Core.dll
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\bin\Debug\net8.0\Battleship.Core.pdb
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.csproj.AssemblyReference.cache
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.AssemblyInfoInputs.cache
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.AssemblyInfo.cs
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.csproj.CoreCompileInputs.cache
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.sourcelink.json
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battlesh.536F4196.Up2Date
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.dll
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\refint\Battleship.Tests.dll
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.pdb
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\Battleship.Tests.genruntimeconfig.cache
+D:\VS CODE\Refactor\Задание 3\Task2\Battleship.Tests\obj\Debug\net8.0\ref\Battleship.Tests.dll

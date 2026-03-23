@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "oF03gh2/9LA=",
+  "success": true,
+  "projectFilePath": "D:\\VS CODE\\Refactor\\Задание 3\\Task2\\Battleship.Tests\\Battleship.Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\serbu\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\serbu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\serbu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
+    "C:\\Users\\serbu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.25\\microsoft.netcore.app.host.win-x64.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
