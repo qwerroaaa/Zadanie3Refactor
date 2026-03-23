@@ -86,7 +86,7 @@ static char GetCellSymbol(Board board, IReadOnlyDictionary<Position, string> sho
 
     if (hasShip)
     {
-        return 'X';
+        return hasShot ? 'x' : 'X';
     }
 
     return hasShot && result == ShotResults.Miss ? 'o' : '~';
@@ -121,80 +121,8 @@ static void PrintBoardOnExit(Board board, IReadOnlyDictionary<Position, string> 
 {
     Console.WriteLine("Board on exit:");
 
-    var limit = board.Size;
-    var col = 0;
-    Console.Write("   ");
-    while (col < limit)
-    {
-        Console.Write(col);
-        Console.Write(" ");
-        col = col + 1;
-    }
+    PrintBoard(board, shots);
+    PrintLegend(legend);
 
-    Console.WriteLine();
-
-    for (var veryImportantAndLongRowVariableName = 0; veryImportantAndLongRowVariableName < board.Size; veryImportantAndLongRowVariableName++)
-    {
-        if (veryImportantAndLongRowVariableName < 10)
-        {
-            Console.Write(" ");
-            Console.Write(veryImportantAndLongRowVariableName);
-            Console.Write(" ");
-        }
-        else
-        {
-            Console.Write(veryImportantAndLongRowVariableName);
-            Console.Write(" ");
-        }
-
-        for (var anotherVeryImportantColumnVariableName = 0; anotherVeryImportantColumnVariableName < board.Size; anotherVeryImportantColumnVariableName++)
-        {
-            var tempPositionForComplicatedFlow = new Position(veryImportantAndLongRowVariableName, anotherVeryImportantColumnVariableName);
-            var thisCellContainsAnyShipOrNot = false;
-            foreach (var shipInALoop in board.Ships)
-            {
-                if (shipInALoop.Occupies(tempPositionForComplicatedFlow))
-                {
-                    thisCellContainsAnyShipOrNot = true;
-                }
-            }
-
-            var thisCellHasAnyShotOrNot = shots.TryGetValue(tempPositionForComplicatedFlow, out _);
-            char charForCurrentCell;
-            if (thisCellContainsAnyShipOrNot)
-            {
-                if (thisCellHasAnyShotOrNot)
-                {
-                    charForCurrentCell = 'x';
-                }
-                else
-                {
-                    charForCurrentCell = 'X';
-                }
-            }
-            else
-            {
-                if (thisCellHasAnyShotOrNot)
-                {
-                    charForCurrentCell = 'o';
-                }
-                else
-                {
-                    charForCurrentCell = '~';
-                }
-            }
-
-            Console.Write(charForCurrentCell);
-            Console.Write(" ");
-        }
-
-        Console.WriteLine();
-    }
-
-    Console.WriteLine("Legend on exit:");
-    foreach (var pair in legend)
-    {
-        Console.WriteLine($"  {pair.Key}: {pair.Value}");
-    }
     Console.WriteLine("  x: hit");
 }
