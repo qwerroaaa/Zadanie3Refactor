@@ -1,9 +1,9 @@
 namespace Battleship.Core;
 
-public struct Position
+public readonly struct Position
 {
-    public int Row;
-    public int Column;
+    public int Row {get;}
+    public int Column {get;}
 
     public Position(int row, int column)
     {

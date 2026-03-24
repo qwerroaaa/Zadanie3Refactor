@@ -2,14 +2,18 @@ namespace Battleship.Core;
 
 public class Ship
 {
-    public HashSet<Position> Cells = new();
-    public HashSet<Position> Hits = new();
+    private readonly HashSet<Position> _cells;
+    private readonly HashSet<Position> _hits = new();
+
+    public IReadOnlyCollection<Position> Cells => _cells;
+    public IReadOnlyCollection<Position> Hits => _hits;
+
 
     public Ship(IEnumerable<Position> cells)
     {
-        Cells = cells.ToHashSet();
+        _cells = cells.ToHashSet();
 
-        if (Cells.Count == 0)
+        if (_cells.Count == 0)
         {
             throw new ArgumentException("Ship must have at least one cell.", nameof(cells));
         }
@@ -17,22 +21,22 @@ public class Ship
 
     public bool IsSunk()
     {
-        return Hits.Count == Cells.Count;
+        return _hits.Count == _cells.Count;
     }
 
     public bool Occupies(Position position)
     {
-        return Cells.Contains(position);
+        return _cells.Contains(position);
     }
 
     public bool RegisterHit(Position position)
     {
-        if (!Cells.Contains(position))
+        if (!_cells.Contains(position))
         {
             return false;
         }
 
-        Hits.Add(position);
+        _hits.Add(position);
         return true;
     }
 }

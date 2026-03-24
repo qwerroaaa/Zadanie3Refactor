@@ -2,9 +2,12 @@ namespace Battleship.Core;
 
 public class Board
 {
-    public List<Ship> Ships = new();
-    public HashSet<Position> Shots = new();
-    public int Size;
+    private readonly List<Ship> _ships = new();
+    private readonly HashSet<Position> _shots = new();
+    public int Size {get; }
+
+    public IReadOnlyList<Ship> Ships => _ships;
+    public IReadOnlyCollection<Position> Shots => _shots;
 
     public Board(int size = 10)
     {
@@ -18,7 +21,7 @@ public class Board
 
     public bool AllShipsSunk()
     {
-        return Ships.Count > 0 && Ships.All(x => x.IsSunk());
+        return _ships.Count > 0 && _ships.All(x => x.IsSunk());
     }
 
     public void PlaceShip(Ship ship)
@@ -30,7 +33,7 @@ public class Board
             throw new InvalidOperationException("Ship placement violates board rules.");
         }
 
-        Ships.Add(ship);
+        _ships.Add(ship);
     }
 
     public bool CanPlaceShip(IEnumerable<Position> cells)
@@ -48,7 +51,7 @@ public class Board
 
         foreach (var cell in normalized)
         {
-            foreach (var existing in Ships)
+            foreach (var existing in _ships)
             {
                 foreach (var existingCell in existing.Cells)
                 {
@@ -80,8 +83,8 @@ public class Board
 
         for (var attempt = 0; attempt < 200; attempt++)
         {
-            Ships.Clear();
-            Shots.Clear();
+            _ships.Clear();
+            _shots.Clear();
             var success = true;
 
             foreach (var shipLength in sortedLengths)
@@ -109,7 +112,7 @@ public class Board
             return ShotResults.OutOfBounds;
         }
 
-        if (!Shots.Add(position))
+        if (!_shots.Add(position))
         {
             return ShotResults.AlreadyShot;
         }
@@ -156,7 +159,7 @@ public class Board
                 continue;
             }
 
-            Ships.Add(new Ship(cells));
+            _ships.Add(new Ship(cells));
             return true;
         }
 
@@ -180,22 +183,21 @@ public class Board
 
         if (sameRow)
         {
-            var ordered = cells.Select(x => x.Column).OrderBy(x => x).ToArray();
-            for (var i = 1; i < ordered.Length; i++)
-            {
-                if (ordered[i] - ordered[i - 1] != 1)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            var columns = cells.Select(x => x.Column);
+            return AreConsecutive(columns);
         }
 
-        var rows = cells.Select(x => x.Row).OrderBy(x => x).ToArray();
-        for (var i = 1; i < rows.Length; i++)
+        var rows = cells.Select(x => x.Row);
+        return AreConsecutive(rows);
+    }
+
+    private static bool AreConsecutive(IEnumerable<int> numbers)
+    {
+        var sorted = numbers.OrderBy(x => x).ToArray();
+        
+        for (var i = 1; i < sorted.Length; i++)
         {
-            if (rows[i] - rows[i - 1] != 1)
+            if (sorted[i] - sorted[i - 1] != 1)
             {
                 return false;
             }
