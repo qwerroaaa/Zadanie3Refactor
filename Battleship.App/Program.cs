@@ -6,7 +6,6 @@ var board = new Board(size: settings.BoardSize);
 board.GenerateRandomFleet(settings.Fleet);
 
 var game = new Game(board);
-var shotHistory = new Dictionary<Position, string>();
 var victoryMessage = new VictoryMessage();
 var boardLegend = new BoardLegend();
 
@@ -20,7 +19,7 @@ while (true)
     if (game.Board.AllShipsSunk())
     {
         Console.WriteLine(victoryMessage.Message.Value);
-        PrintBoard(game.Board, shotHistory);
+        PrintBoard(game.Board, game.ShotHistory);
         PrintLegend(boardLegend.Legend.Value);
         break;
     }
@@ -31,7 +30,7 @@ while (true)
     if (string.Equals(input, "q", StringComparison.OrdinalIgnoreCase))
     {
         Console.WriteLine("Exit.");
-        PrintBoardOnExit(game.Board, shotHistory, boardLegend.Legend.Value);
+        PrintBoardOnExit(game.Board, game.ShotHistory, boardLegend.Legend.Value);
         break;
     }
 
@@ -50,7 +49,6 @@ while (true)
 
     var shotPosition = new Position(row, column);
     var result = game.MakeShot(shotPosition);
-    shotHistory[shotPosition] = result;
     Console.WriteLine($"Result: {result}");
 }
 

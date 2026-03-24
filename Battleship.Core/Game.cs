@@ -2,7 +2,10 @@ namespace Battleship.Core;
 
 public class Game
 {
-    public Board Board;
+    public Board Board {get; }
+
+    private readonly Dictionary<Position, string> _shotHistory = new();
+    public IReadOnlyDictionary<Position, string> ShotHistory => _shotHistory;
 
     public Game(Board board)
     {
@@ -11,6 +14,8 @@ public class Game
 
     public string MakeShot(Position position)
     {
-        return Board.Fire(position);
+        var result = Board.Fire(position);
+        _shotHistory[position] = result;
+        return result;
     }
 }
