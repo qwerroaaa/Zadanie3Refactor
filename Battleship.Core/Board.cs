@@ -180,22 +180,21 @@ public class Board
 
         if (sameRow)
         {
-            var ordered = cells.Select(x => x.Column).OrderBy(x => x).ToArray();
-            for (var i = 1; i < ordered.Length; i++)
-            {
-                if (ordered[i] - ordered[i - 1] != 1)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            var columns = cells.Select(x => x.Column);
+            return AreConsecutive(columns);
         }
 
-        var rows = cells.Select(x => x.Row).OrderBy(x => x).ToArray();
-        for (var i = 1; i < rows.Length; i++)
+        var rows = cells.Select(x => x.Row);
+        return AreConsecutive(rows);
+    }
+
+    private static bool AreConsecutive(IEnumerable<int> numbers)
+    {
+        var sorted = numbers.OrderBy(x => x).ToArray();
+        
+        for (var i = 1; i < sorted.Length; i++)
         {
-            if (rows[i] - rows[i - 1] != 1)
+            if (sorted[i] - sorted[i - 1] != 1)
             {
                 return false;
             }
